@@ -28,7 +28,6 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     style: 'compressed',
-                    compass: true,
                     sourcemap: false,
                     lineNumbers: true,
                     require: 'susy'
@@ -41,10 +40,10 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            options: {
-                livereload: true
-            },
             sass: {
+            	options: {
+	            	livereload: true,
+            	},
                 files: [
                     'assets/sass/*.scss',
                     'assets/sass/partials/*.scss'
@@ -54,6 +53,9 @@ module.exports = function (grunt) {
                 ]
             },
             uglify: {
+            	options: {
+	            	livereload: true,
+            	},
 	            files: [
 	            	'assets/js/_*.js'
 	            ],
